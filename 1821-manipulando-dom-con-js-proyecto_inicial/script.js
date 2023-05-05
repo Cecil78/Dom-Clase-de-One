@@ -1,6 +1,13 @@
-const btn = document.querySelector("data-form-btn");
+const btn = document.querySelector("button");
 console.log(btn);
-btn.addEventListener('click', function(){
-    const input = document.querySelector('[data-form-imput]');
+
+const createTask = (evento) => {
+    evento.preventDefault()
+    const input = document.querySelector('[data-form-input]');
     console.log(input.value);
-})
+}
+
+
+
+//Arrow functions o funciones anonimas 
+btn.addEventListener('click', createTask);
