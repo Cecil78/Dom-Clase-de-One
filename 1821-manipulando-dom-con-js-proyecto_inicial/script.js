@@ -37,7 +37,10 @@ const checkComplete= () => {
     i.addEventListener("click", completeTask);
     return i; 
 }
-
-const completeTask = () => {
-    console.log("Complete Task");
+//IIFE
+const completeTask = (event) => { 
+    const element = event.target; 
+    element.classList.toggle ("fas");
+    element.classList.toggle ("completeIcon");
+    element.classList.toggle ("far");
 }
